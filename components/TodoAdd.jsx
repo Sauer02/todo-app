@@ -1,4 +1,5 @@
 import { Button, Grid, TextField } from "@mui/material";
+import { grey } from "@mui/material/colors";
 import React from "react";
 
 export default function TodoAdd (props) {
@@ -10,11 +11,17 @@ export default function TodoAdd (props) {
     return (
         <Grid container>
                 <Grid  md={11} item style={{ paddingRight: 16 }}>
-                    <TextField
+                    <TextField 
+                        variant="filled"
+                        color="text.primary"
                         placeholder="Add Todo here"
                         value={inputValue}
                         onChange={v => setInputValue(v.target.value)}
-                        fullWidth                 
+                        fullWidth
+                        sx={{
+                            borderColor: 'secondary.main', 
+                            bgcolor: 'primary.main'
+                        }}                
                     />
                 </Grid>
                 <Grid  md={1} item>
