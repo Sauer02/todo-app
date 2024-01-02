@@ -49,7 +49,7 @@ export default function NavBar () {
                   
                 </Menu> 
                 <Typography variant="h6">
-                TODO App of Olaf Hahn
+                TODO App of Christian Sauer
               </Typography>
             </Toolbar>
           </AppBar>

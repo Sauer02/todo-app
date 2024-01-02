@@ -2,25 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: todo-app-deployment
-  namespace: todo-app-oh
+  namespace: todo-app-csa
   labels:
-    app: todo-app-oh-new
+    app: todo-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: todo-app-oh-new
+      app: todo-app
   template:
     metadata:
       labels:
-        app: todo-app-oh-new
+        app: todo-app
     spec:
       containers:
-      - name: todo-app-oh-new
-        image: ohahnat/todo-app-oh-new:latest
+      - name: todo-db-nextjs
+        image: csauercampus/todo-db:latest
         ports:
         - containerPort: 3000
-          name: todo-app-oh-new
+          name: todo
         env:
           - name: BASE_PATH
             valueFrom:
